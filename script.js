@@ -63,8 +63,7 @@ console.log(`Avarage odd : ${avarageOdds}`,"\n");
 
 console.log(`Odd of victory ${game.team1} : ${oddsValues[0]}`);
 console.log(`Odd of draw : ${oddsValues[1]}`);
-console.log(`Odd of victory ${game.team2} : ${oddsValues[2]}`)
-
+console.log(`Odd of victory ${game.team2} : ${oddsValues[2]}`, "\n")
 
 
 var map = game.scored.reduce(function(obj, a) {
@@ -73,11 +72,9 @@ var map = game.scored.reduce(function(obj, a) {
 },{});
 
 
-
-
 function sortObject(o) {
     return Object.keys(o).sort().reduce((r, k) => (r[k] = o[k], r), {});
 }
 
 var sortedObj=sortObject(map);
-console.log(sortedObj)
+console.log(sortedObj);

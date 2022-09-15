@@ -72,7 +72,12 @@ var map = game.scored.reduce(function(obj, a) {
   return obj;
 },{});
 
-console.log(map);
 
 
 
+function sortObject(o) {
+    return Object.keys(o).sort().reduce((r, k) => (r[k] = o[k], r), {});
+}
+
+var sortedObj=sortObject(map);
+console.log(sortedObj)
